@@ -1,0 +1,256 @@
+@import url('reset.css');
+
+:root {
+    --dark-blue: #1e2a47;
+    --mid-blue: #3d4f8c;
+    --light-blue: #a0b8d1;
+    --dark-grey: #2d2d2d;
+    --mid-grey: #707070;
+    --light-grey: #d1d1d1;
+    --deep-purple: #6a4c9c;
+    --sage-green: #4c9c79;
+}
+
+.retro-mode {
+    background-color: #000;
+    color: #00FF00;
+}
+
+.retro-mode header, .retro-mode main, .retro-mode footer {
+    font-family: 'Press Start 2P', cursive, sans-serif;
+}
+
+.retro-mode header {
+    background-color: #111;
+    color: #00FF00;
+    border-bottom: 2px solid #00FF00;
+}
+
+.retro-mode footer {
+    background-color: #111;
+    color: #00FF00;
+    text-align: center;
+    padding: 1rem;
+}
+
+.retro-mode nav ul li a {
+    color: #00FF00;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.retro-mode * {
+    image-rendering: pixelated;
+}
+
+.retro-mode .avatar {
+    border-radius: 0;
+}
+
+.retro-mode section {
+    background-color: #111;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+}
+
+.retro-mode .project-item img {
+    border: 2px solid #00FF00;
+    box-shadow: 0 0 10px #00FF00;
+    transition: transform 0.3s ease;
+}
+
+.retro-mode .project-item img:hover {
+    transform: scale(1.05);
+}
+
+.retro-mode .project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.retro-mode footer p {
+    margin: 0;
+}
+
+body {
+    font-family: "besley", serif;
+    background-color: var(--dark-grey);
+    color: var(--mid-grey);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--dark-blue);
+    color: var(--light-grey);
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.headshot {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--light-grey);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover {
+    background-color: var(--deep-purple);
+    border-radius: 5px;
+}
+
+main {
+    padding-top: 100px;
+}
+
+section {
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    background-color: var(--light-grey);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.about p {
+    font-size: 20px;
+    font-family: "besley", serif;
+    font-style: italic;
+}
+.project-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.main-project {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 2rem;
+    width: 65%;
+    height: auto;
+}
+
+.main-project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+}
+
+.project-item {
+    width: 30%;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
+}
+
+.stacked-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 30%;
+}
+
+.stacked-projects .project-item {
+    width: 100%;
+}
+
+.contact p {
+    font-size: 20px;
+    font-family: "besley", serif;
+    font-style: italic;
+}
+
+a {
+    color: var(--mid-blue);
+}
+
+a:hover {
+    color: var(--dark-grey);
+}
+
+footer {
+    background-color: var(--dark-grey);
+    color: var(--light-grey);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    margin: 0;
+    color: var(--sage-green);
+}
+
+footer a:hover {
+    color: var(--mid-blue);
+}
+
+@media (max-width: 768px) {
+    .project-gallery {
+        flex-direction: column;
+    }
+
+    .main-project,
+    .stacked-projects {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-project img {
+        width: 90%;
+    }
+}
